@@ -1,0 +1,178 @@
+    void Bankomat::selectOption()
+    {
+        switch (choice) 
+        {
+            case 1:
+            wplacA();
+            startUp();
+            break;
+
+
+
+            case 2:
+            withdrawA();
+            startUp();
+            break;
+
+
+            case 3:
+            std::cout << "You have: " << AA + accountA << " " << "Money on your account A\n";
+            startUp();
+            break;
+
+            case 0:
+            break;
+        }
+    }
+
+
+//     private:    
+
+//     void wplacA();
+
+//     void wplac() 
+//     {
+//         std::cout << "How much do you want to put in: ";
+//         if (std::cin.fail())
+//             {
+//                 std::cout << "Stupid neckhurt type in number not char!\n" << std::endl;
+//                 std::cin.clear();
+//                 std::cin.ignore(std::numeric_limits<std::streamsize>::max());
+//                 std::cout << "Try again!";
+//                 wplacB();
+//             }
+//             else
+//             {
+//                 std::cout << "Your ballance in account A is equal to: " << AB + accountB << "\n";
+//                 startUp();
+//             }
+//     }
+
+//     void withdraw() 
+//     {
+//             std::cout << "How much do you want to withdraw: ";
+//             std::cin >> AA;
+
+
+//         do  
+//         {
+//                 if(AA < accountA) 
+//             {
+//                 std::cout << "Your ballance in account A is equal to: " << accountA - AA << "\n";
+//                 startUp();
+//             }
+//                 else 
+//             {
+//                 std::cout << "You can not withdraw more than you own on account A nor B\n";
+//             }
+//         } while (AA > accountA);
+//     }
+
+
+
+
+void Bankowosc::wplac(){
+        Tom::Helpers::displayText("How much do you want to put in?");
+        std::cin >> AA;
+
+            if (std::cin.fail())
+            {   
+                Tom::Helpers::displayText("Stupid neckhurt type in number not char");
+                Tom::Helpers::displayText("Try again!");
+                
+                
+                
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max());
+                wplacA();
+            }
+            else
+            {   
+                Tom::Helpers::displayText("Your ballance in account A is equal to: ");
+                
+                startUp();
+            }
+}
+
+
+
+
+
+
+
+
+
+    void Bankowosc::wyplac()
+    {
+        double AA;
+        Tom::Helpers::displayText("How much do you want to put in? ");
+        std::cin >> AA;
+
+        if (std::cin.fail())
+        {
+            Tom::Helpers::displayText("Stupid neckhurt type in number not char");
+            Tom::Helpers::displayText("Try again!");
+
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max());
+            wplac();
+        }
+        else
+        {
+            Tom::Helpers::displayText("Your ballance in account A is equal to: " "AA");
+        
+            
+        }
+    }
+
+
+
+    void Bankowosc::wplac()
+    {
+        double AA;
+        Tom::Helpers::displayText("How much do you want to put in? ");
+        std::cin >> AA;
+
+        if (std::cin.fail())
+        {
+            Tom::Helpers::displayText("Stupid neckhurt type in number not char");
+            Tom::Helpers::displayText("Try again!");
+
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max());
+            wplac();
+        }
+        else
+        {
+        Tom::Helpers::displayText("Your ballance in account A is equal to: ");
+        
+            
+        }
+    }
+
+
+
+
+
+
+
+
+    startUp.startUp();
+
+
+
+
+
+
+Aurelius Kowalcznikow
+
+
+g++ -std=c++20 -Wall -Wextra -I. -o output/main.exe main.cpp Models/bankomat.cpp Models/bankowosc.cpp Helpers/printer.cpp Models/database_manager.cpp -lsqlite3
+
+
+
+class klasa{}
+
+obiekt -> klasa.klasa
+
+wywołanie metody -> klasa.metoda();
